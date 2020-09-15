@@ -1,0 +1,140 @@
+ion-content {
+    --background: var(--cinza-claro);
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.info ion-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    color: var(--marrom);
+
+    margin-left: 5%;
+}
+
+.bio h4 {
+    font-family: var(--ubuntu);
+    font-size: 1em;
+    font-weight: bold;
+
+    margin-bottom: 0;
+}
+
+.bio p {
+    font-family: var(--montserrat);
+    font-size: 0.9em;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.atividade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.atividade .count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: var(--cinza-escuro);
+    font-family: var(--ubuntu);
+
+}
+
+.atividade div h5 {
+    margin-top: 0;
+}
+
+/* Form de editar perfil */
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo img{
+    max-width: 100%;
+    max-height: 15vh;
+    border-radius: 20px;
+}
+
+.photo ion-button {
+    align-items: center;
+    font-family: var(--ubuntu);
+}
+
+form ion-icon {
+    margin-top: 4%;
+    margin-left: 4%;
+    color: Var(--marrom);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 2%;
+}
+
+.form-content ion-item {
+    width: 90%;
+    --background: var(--cinza-claro);
+    margin-bottom: 3%;
+
+}
+
+.form-content ion-item ion-label {
+    font-family: var(--ubuntu);
+    color: var(--marrom);
+}
+
+.submit {
+    font-family: var(--ubuntu);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 3% 6%;
+}
+
+.card {
+    background: var(--amarelo);
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.card ion-card-title {
+    font-family: var(--ubuntu);
+    font-size: 1.1em;
+    text-align: center;
+
+    margin-left: 5%;
+    margin-right: 5%;
+}

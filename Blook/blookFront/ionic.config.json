@@ -1,0 +1,7 @@
+{
+  "name": "blookFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

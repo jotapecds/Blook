@@ -1,0 +1,174 @@
+// Cor de fundo
+ion-content{
+    --background: var(--cinza-claro);
+}
+
+ion-toolbar{
+    --background:var(--cinza-claro);
+}
+
+//Icone da header
+ion-toolbar ion-icon{
+    height: 25px;
+    width: 25px;
+    color:var(--marrom);
+    margin-left: 2%;
+}
+//Botão de publicar
+.submit{
+    position:absolute;
+    top:0;
+    right:0;
+    width:22vw;
+    height:6vh;
+
+    --background:var(--rosa);
+
+    --border-radius: 30px;
+
+    font-family: var(--ubuntu);
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+
+    
+}
+
+//Botão de rascunho
+.sketch{
+    position: absolute;
+    top:15%;
+    right:23%;
+
+    height:4.3vh ;
+    width:35vw ;
+    --background: transparent;
+    --border-color:var(--rosa);
+    --border-style:solid;
+    --border-width:2px;
+    --color:var(--rosa);
+
+    --border-radius:30px;
+
+    font-family: var(--ubuntu);
+    text-align: center;
+    font-size:0.8em; 
+
+}
+
+//opções de post
+.select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 5%;
+    --background:var(--cinza-claro);
+    --border:0;
+}
+
+.select ion-item {
+   display:flex;
+   flex-direction: column;
+   align-items: center; 
+}
+
+.select ion-item ion-label {
+    color: var(--marrom);
+    text-align: center;
+    font-family: var(--ubuntu);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.select ion-item ion-select{
+    --color-checked:var(--rosa);
+    font-family: var(--montserrat);
+}
+
+ion-item{
+    --background:var(--cinza-claro);
+    
+}
+
+.addTitle{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.addTitle ion-label{
+    color: var(--marrom);
+    text-align: center;
+    font-family: var(--ubuntu);
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.addTitle ion-item {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: var(--montserrat);
+    font-size: 1.2em;
+}
+
+//Textarea
+.texto{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.texto ion-item{
+    --border-color:var(--marrom);
+    --border-style:solid;
+    --border-radius:30px;
+    --border-width:1%;
+    
+}
+
+.texto ion-textarea{
+
+    width: 80vw;
+    height: 63vh;
+
+    font-family: var(--montserrat);
+    font-size:1em;
+    color: var(--cinza-escuro);
+     
+}
+
+
+
+//Botão da câmera
+
+
+.photo ion-fab{
+    position: fixed;
+    bottom: 12%;
+    right: 0;
+    left: 7%;
+
+    justify-content: start;
+    align-items: end;
+}
+
+.photo ion-fab-button{
+    position: fixed;
+    --background:var(--marrom);
+}
+
+.photo img{
+    left: 10%;
+    bottom: 5%;
+    position: fixed;
+    max-width: 100%;
+    max-height: 5vh;
+    margin-left: 15%;
+
+}
+
+

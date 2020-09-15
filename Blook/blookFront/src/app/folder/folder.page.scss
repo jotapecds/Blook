@@ -1,0 +1,33 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 8%;
+}
+
+#container strong {
+  font-family: var(--ubuntu);
+  font-size: 1.5em;
+  margin-bottom: 10%;
+  color: var(--marrom);
+
+}
+
+#container p {
+  font-family: var(--ubuntu);
+  font-size: 0.9em;
+  margin-top: 5%;
+  color: var(--marrom);
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}

@@ -1,0 +1,39 @@
+ion-content {
+    --background: var(--cinza-claro);
+}
+
+h2 {
+    font-family: var(--ubuntu);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--marrom);
+
+    margin: 5% 5% 2%;
+}
+
+h4 {
+    font-family: var(--montserrat);
+    font-size: 1em;
+    color: var(--marrom);
+
+    margin: 0% 5% 5%;
+}
+
+ion-segment {
+    font-family: var(--ubuntu);
+    
+}
+
+
+/* ion-segment-button{
+    --background-checked:#DDDFE1;
+} */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 0%;
+}
+
+

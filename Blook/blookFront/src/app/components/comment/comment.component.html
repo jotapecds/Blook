@@ -1,0 +1,22 @@
+<div class="comment">
+  <ion-card>
+    
+    <div class="userComment">
+     
+      <div class="user">
+        <ion-avatar>
+          <img [src]="comment.user.profile_pic" alt="foto do usuário que fez o comentário"/>
+        </ion-avatar>
+        <ion-label>{{ comment.user.name }}</ion-label>
+      </div>
+
+      <div>
+          <ion-icon class="userAction" slot="end" name="trash-outline" *ngIf="(isAdmin==1) || (userId==comment.user.id)" (click)="deleteComment(comment.id)"></ion-icon>
+      </div>
+      
+    </div>
+
+    <p> {{ comment.text }} </p>
+
+  </ion-card>
+</div>

@@ -1,0 +1,81 @@
+<app-header></app-header>
+
+<ion-content>
+  <div *ngIf="!editMode">
+    
+    <div class="top">
+      <div class="avatar">
+        <ion-avatar>
+          <img src="{{user.profile_pic}}" alt="foto do usuário que fez o post">
+        </ion-avatar>      
+        <ion-label>{{ user.name }}</ion-label>
+      </div>
+
+      <div *ngIf = "showDeleteButton()">
+          <ion-icon class="userAction" *ngIf = "userId==postUserId" slot="end" name="create-outline" (click)="toggleEdit()"></ion-icon>
+          <ion-icon class="userAction" slot="end" name="trash-outline" (click)="deletePost()"></ion-icon>
+      </div>
+    </div>
+
+    <div class="post">
+      <h2>
+        {{ post.title }}
+      </h2>
+      <img *ngIf="photo!==null" [src]="post.image">
+      <p> {{ post.text }}</p>
+    </div>
+  </div>
+
+  <form [formGroup]="updateForm" (ngSubmit)="updatePost(updateForm)" *ngIf="editMode">
+    <ion-icon size="large" name="chevron-back-outline" (click)="untoggleEdit()"></ion-icon>
+      <!-- Input de adicionar o título do post -->
+    <div class="addTitle">
+      <ion-label>Título:</ion-label>
+      <ion-item  mode="md">
+        <ion-input type="text" clearInput="true" formControlName="title" ></ion-input>
+      </ion-item>
+    </div>
+
+    <!-- Text-area pra escrever o post -->
+    <div class="texto">
+
+      <ion-item lines='none'>
+        <ion-textarea placeholder="O que você está lendo?" rows='14' formControlName="text">
+        </ion-textarea>  
+      </ion-item>
+    
+    </div>
+    <ion-button class="submit" expand="block" color="primary" type="submit" [disabled]="updateForm.invalid"> Atualizar </ion-button>
+  </form>
+
+  <div *ngIf="!editMode">
+    <div class="action" *ngIf="auth">
+      <ion-icon name="heart-outline" *ngIf="!liked" (click)="likePost()"></ion-icon>
+      <ion-icon name="heart" *ngIf="liked" (click)="likePost()"></ion-icon>
+      <ion-icon name="share-social-outline"></ion-icon>
+    </div>
+
+    <div class="comment-title">
+      <ion-label>Comentários</ion-label>
+    </div>
+
+    <div class="comment" *ngIf = "auth">
+      
+      <form [formGroup]="commentForm" (ngSubmit)="createComment(commentForm)">
+        <ion-item lines="none">
+          <ion-textarea rows="1" type="text" placeholder="Escreva seu comentário" formControlName="text"></ion-textarea>
+        </ion-item>
+
+        <ion-button size="small" fill="clear" type="submit" [disabled]="commentForm.invalid">
+          <ion-icon slot="end" size="large" name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </form>
+    </div>
+
+    <div class="commentText" *ngFor="let comment of comments" >
+      <app-comment (trashClicked)='deleteComment($event)' [comment]='comment'></app-comment>
+    </div>
+  </div> 
+</ion-content>
+
+<app-tabmenu></app-tabmenu>

@@ -1,0 +1,122 @@
+// Cor de fundo
+ion-content{
+    --background:var(--cinza-claro);
+}
+
+
+//botão de segmento de posts e usuário
+
+ion-segment-button{
+/*     --background-checked:#DDDFE1; */
+    font-family: 'Ubuntu',sans-serif;
+}
+
+
+// Barra de pesquisa
+.searchBar{
+    margin: 2%;
+    
+}
+
+.searchBar ion-searchbar{
+    --background:#FFFF;
+    --border-radius:20px;
+    --border-shadow: none;
+    height:4.3vh;
+    margin-top:3vh;
+}
+
+// slide de categorias
+.slides{
+    margin:2%;
+    
+}
+
+.slides ion-slides{
+    padding: 20px;
+}
+
+ion-chip{
+    height:5vh;
+    color:#FFFF;
+    font-family: var(--montserrat);
+    font-weight: 500;
+    text-align: center;
+    
+}
+
+//Cards do post
+
+.postsCard{
+    display: grid;
+    grid-template-columns:100%;
+}
+
+.postsCard ion-card{
+    text-align: center;    
+    --background:var(--amarelo);
+    border-radius: 20px;
+
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 0;
+}
+.postsCard ion-card ion-card-title {
+    margin-top: 4%;
+    margin-right: 4%;
+    margin-left: 4%;
+    font-family: var(--ubuntu);
+    color: #000;
+    font-size: 1.5em;
+}
+
+.postsCard ion-card h4{
+    margin-right: 2%;
+    margin-left: 2%;
+
+    font-family: var(--montserrat);
+    color: #000;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+
+// Lista de Usuários
+.listUsers div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listUsers ion-card{
+    
+    --background:var(--amarelo);
+    height: 11vh;
+    border-radius: 20px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.listUsers ion-card ion-avatar {
+    margin-left: 2%;
+}
+
+.listUsers ion-card-title{
+    
+    text-align: left;
+    font-family: "Ubuntu",sans-serif;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.4em;
+
+    width: 70vw;
+    margin-left: 4%;
+    margin-right: 4%;
+}
